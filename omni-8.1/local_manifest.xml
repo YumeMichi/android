@@ -2,49 +2,77 @@
 <manifest>
 
   <!-- Repositories to replace -->
+  <remove-project name="android_bionic" />
+  <remove-project name="android_build" />
+  <remove-project name="android_build_soong" />
   <remove-project name="android_external_tinycompress" />
   <remove-project name="android_frameworks_av" />
   <remove-project name="android_frameworks_base" />
+  <remove-project name="android_hardware_interfaces" />
   <remove-project name="android_hardware_qcom_bt" />
   <remove-project name="android_hardware_qcom_wlan" />
   <remove-project name="android_system_bt" />
   <remove-project name="android_packages_apps_OmniGears" />
+  <remove-project name="android_packages_apps_OmniLib" />
   <remove-project name="android_packages_apps_Settings" />
-  <!-- <remove-project name="android_vendor_omni" /> -->
+  <remove-project name="android_vendor_omni" />
+  <remove-project name="platform/frameworks/support" />
 
   <!-- Repositories to fetch -->
   <!-- OmniROM -->
   <project name="android_device_qcom_caf-sepolicy" path="device/qcom/sepolicy" remote="omnirom" revision="android-8.1" />
-  <project name="vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="omnirom" revision="android-8.1" />
   <project name="android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="omnirom" revision="android-8.1" />
   <project name="android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="omnirom" revision="android-8.1" />
   <project name="android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="omnirom" revision="android-8.1" />
+  <project name="vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="omnirom" revision="android-8.1" />
 
   <!-- LineageOS -->
   <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
   <project name="LineageOS/android_external_tinycompress" path="external/tinycompress" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_packages_apps_FMRadio" path="packages/apps/FMRadio" remote="github" revision="lineage-15.1" />
   <project name="LineageOS/android_packages_apps_Jelly" path="packages/apps/Jelly" remote="github" revision="lineage-15.1" />
 
   <!-- Oreo-onyx -->
+  <project name="Oreo-onyx/bionic" path="bionic" remote="github" revision="android-8.1" groups="pdk" />
+  <project name="Oreo-onyx/build_make" path="build/make" remote="github" revision="android-8.1" groups="pdk" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project name="Oreo-onyx/build_soong" path="build/soong" remote="github" revision="android-8.1" >
+      <linkfile src="root.bp" dest="Android.bp" />
+      <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
   <project name="Oreo-onyx/frameworks_av" path="frameworks/av" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/frameworks_base" path="frameworks/base" remote="github" revision="android-8.1" />
+  <project name="Oreo-onyx/frameworks_support" path="frameworks/support" remote="github" revision="android-8.1" />
+  <project name="Oreo-onyx/hardware_interfaces" path="hardware/interfaces" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/hardware_qcom_audio" path="hardware/qcom/audio-caf-msm8974" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/hardware_qcom_bt" path="hardware/qcom/bt" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/hardware_qcom_display" path="hardware/qcom/display-caf-msm8974" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/hardware_qcom_media" path="hardware/qcom/media-caf-msm8974" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/packages_apps_OmniGears" path="packages/apps/OmniGears" remote="github" revision="android-8.1" />
+  <project name="Oreo-onyx/packages_apps_OmniLib" path="packages/apps/OmniLib" remote="github" revision="android-8.1" />
   <project name="Oreo-onyx/packages_apps_Settings" path="packages/apps/Settings" remote="github" revision="android-8.1" />
-  <project name="Oreo-onyx/packages_apps_Snap" path="packages/apps/Snap" remote="github" revision="o-mr1" />
   <project name="Oreo-onyx/system_bt" path="system/bt" remote="github" revision="android-8.1" />
-  <!-- <project name="Oreo-onyx/vendor_omni" path="vendor/omni" remote="github" revision="android-8.1" /> -->
+  <project name="Oreo-onyx/vendor_omni" path="vendor/omni" remote="github" revision="android-8.1" />
 
   <!--Custom-->
   <project path="device/oneplus/onyx" name="YumeMichi/device_oneplus_onyx" remote="github" revision="android-8.1" />
   <project path="kernel/oneplus/onyx" name="YumeMichi/kernel_oneplus_onyx" remote="github" revision="lineage-15.1-sultan" />
-  <project path="vendor/oneplus/onyx" name="YumeMichi/vendor_oneplus_onyx" remote="github" revision="lineage-15.1-sultan" />
+  <project path="vendor/oneplus/onyx" name="YumeMichi/vendor_oneplus_onyx" remote="github" revision="android-8.1" />
+
+  <!-- MindTheGapps -->
+  <project name="MindTheGapps/vendor_gapps" path="vendor/gapps" remote="github" revision="master" depth="1" />
 
   <!-- Repositories to remove -->
+  <remove-project name="android_packages_apps_Camera2" />
   <remove-project name="android_packages_apps_MusicFX" />
   <remove-project name="android_packages_apps_OmniChange" />
   <remove-project name="android_packages_apps_OpenDelta" />
