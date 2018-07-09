@@ -8,7 +8,6 @@
   <remove-project name="LineageOS/android_external_exfat" />
   <remove-project name="LineageOS/android_frameworks_av" />
   <remove-project name="LineageOS/android_frameworks_base" />
-  <remove-project name="LineageOS/android_packages_apps_Jelly" />
   <remove-project name="LineageOS/android_packages_apps_Snap" />
   <remove-project name="LineageOS/android_vendor_lineage" />
 
@@ -21,10 +20,9 @@
   <!--Custom-->
   <project path="device/oneplus/onyx" name="YumeMichi/device_oneplus_onyx" revision="lineage-15.1-sultan" />
   <project path="kernel/oneplus/onyx" name="YumeMichi/kernel_oneplus_onyx" revision="lineage-15.1-sultan" />
-  <project path="vendor/oneplus" name="YumeMichi/proprietary_vendor_oneplus" revision="lineage-15.1-sultan" />
+  <project path="vendor/oneplus/onyx" name="YumeMichi/vendor_oneplus_onyx" revision="lineage-15.1-sultan" />
 
   <project path="packages/apps/Phonograph" name="omnirom/android_packages_apps_Phonograph" revision="android-8.1" />
-  <project path="packages/apps/Via" name="Oreo-onyx/packages_apps_Via" />
   <project path="packages/apps/Snap" name="Oreo-onyx/packages_apps_Snap" />
 
   <project path="external/exfat" name="Oreo-onyx/external_exfat" />
