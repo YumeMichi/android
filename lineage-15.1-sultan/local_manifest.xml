@@ -1,35 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
-  <!--Patcher (run "./patcher/patcher.sh" before each compilation)-->
   <project name="YumeMichi/patcher" path="patcher" />
-
-  <!-- Repositories to replace -->
   <remove-project name="LineageOS/android_external_exfat" />
   <remove-project name="LineageOS/android_frameworks_av" />
   <remove-project name="LineageOS/android_frameworks_base" />
   <remove-project name="LineageOS/android_packages_apps_Snap" />
   <remove-project name="LineageOS/android_vendor_lineage" />
-
-  <!-- Repositories to fetch -->
-  <!-- Upstream -->
   <project name="LineageOS/android_device_oppo_common" path="device/oppo/common" />
   <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" />
   <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" />
-
-  <!--Custom-->
-  <project path="device/oneplus/onyx" name="YumeMichi/device_oneplus_onyx" revision="lineage-15.1-sultan" />
-  <project path="kernel/oneplus/onyx" name="YumeMichi/kernel_oneplus_onyx" revision="lineage-15.1-sultan" />
-  <project path="vendor/oneplus/onyx" name="YumeMichi/vendor_oneplus_onyx" revision="lineage-15.1-sultan" />
-
-  <project path="packages/apps/Phonograph" name="omnirom/android_packages_apps_Phonograph" revision="android-8.1" />
-  <project path="packages/apps/Snap" name="Oreo-onyx/packages_apps_Snap" />
-
-  <project path="external/exfat" name="Oreo-onyx/external_exfat" />
-
-  <project path="frameworks/av" name="Oreo-onyx/frameworks_av" />
-  <project path="frameworks/base" name="Oreo-onyx/frameworks_base" />
-  <project path="vendor/lineage" name="Oreo-onyx/vendor_lineage" />
-
-  <!-- Repositories to remove -->
+  <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" revision="lineage-15.1-sultan" />
+  <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" revision="lineage-16.0" />
+  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" revision="lineage-15.1-sultan" />
+  <project name="Oreo-onyx/packages_apps_Snap" path="packages/apps/Snap" />
+  <project name="Oreo-onyx/external_exfat" path="external/exfat" />
+  <project name="Oreo-onyx/frameworks_av" path="frameworks/av" />
+  <project name="Oreo-onyx/frameworks_base" path="frameworks/base" />
+  <project name="Oreo-onyx/vendor_lineage" path="vendor/lineage" />
+  <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" />
 </manifest>
