@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Manifest: https://github.com/AOSPA-onyx/manifest.git -->
+<manifest>
+  <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" remote="github" revision="lineage-15.1" />
+  <project name="Oreo-onyx/hardware_qcom_audio" path="hardware/qcom/audio" remote="github" revision="oreo-mr1-8974" />
+  <project name="Oreo-onyx/hardware_qcom_display" path="hardware/qcom/display" remote="github" revision="oreo-mr1-8974" />
+  <project name="Oreo-onyx/hardware_qcom_media" path="hardware/qcom/media" remote="github" revision="oreo-mr1-8974" />
+  <project name="LineageOS/android_hardware_qcom_fm" path="hardware/qcom/fm" remote="github" revision="lineage-15.1" />
+  <project name="LineageOS/android_packages_apps_FMRadio" path="packages/apps/FMRadio" remote="github" revision="lineage-15.1" />
+  <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" remote="github" revision="oreo-mr1" />
+  <project depth="1" name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" remote="github" revision="lineage-16.0" />
+  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" remote="github" revision="lineage-15.1-sultan" />
+</manifest>
