@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+  <remote  name="github"
+           fetch="https://github.com" />
+  <remote  name="pie"
+           fetch="https://github.com/Pie-onyx"
+           revision="pie" />
+  <remote  name="lineage"
+           fetch="https://github.com/LineageOS"
+           revision="lineage-16.0" />
+  <remote  name="omnirom"
+           fetch="https://github.com/omnirom"
+           revision="android-9.0" />
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/omnirom"
+           revision="android-9.0" />
+
+  <!-- Repos to replace -->
+  <remove-project name="platform/bionic" />
+  <remove-project name="platform/bootable/recovery" />
+  <remove-project name="platform/build" />
+  <remove-project name="platform/build/soong" />
+  <remove-project name="platform/external/chromium-webview" />
+  <remove-project name="platform/external/libtextclassifier" />
+  <remove-project name="platform/external/perfetto" />
+  <remove-project name="platform/external/selinux" />
+  <remove-project name="platform/external/tinycompress" />
+  <remove-project name="platform/frameworks/av" />
+  <remove-project name="platform/frameworks/base" />
+  <remove-project name="platform/frameworks/native" />
+  <remove-project name="platform/hardware/libhardware" />
+  <remove-project name="platform/hardware/libhardware_legacy" />
+  <remove-project name="platform/hardware/qcom/audio" />
+  <remove-project name="platform/hardware/qcom/bt" />
+  <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/hardware/qcom/keymaster" />
+  <remove-project name="platform/hardware/qcom/media" />
+  <remove-project name="platform/hardware/qcom/power" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+  <remove-project name="platform/hardware/ril" />
+  <remove-project name="platform/packages/apps/Browser2" />
+  <remove-project name="platform/packages/apps/Camera2" />
+  <remove-project name="platform/packages/apps/Calendar" />
+  <remove-project name="platform/packages/apps/Contacts" />
+  <remove-project name="platform/packages/apps/DeskClock" />
+  <remove-project name="platform/packages/apps/DocumentsUI" />
+  <remove-project name="platform/packages/apps/Dialer" />
+  <remove-project name="platform/packages/apps/Email" />
+  <remove-project name="platform/packages/apps/ExactCalculator" />
+  <remove-project name="platform/packages/apps/Gallery2" />
+  <remove-project name="platform/packages/apps/Launcher3" />
+  <remove-project name="platform/packages/apps/Messaging" />
+  <remove-project name="platform/packages/apps/QuickSearchBox" />
+  <remove-project name="platform/packages/apps/Settings" />
+  <remove-project name="platform/packages/apps/SettingsIntelligence" />
+  <remove-project name="platform/packages/apps/Stk" />
+  <remove-project name="platform/packages/apps/Terminal" />
+  <remove-project name="platform/packages/apps/UnifiedEmail" />
+  <remove-project name="platform/packages/inputmethods/LatinIME" />
+  <remove-project name="platform/packages/providers/BlockedNumberProvider" />
+  <remove-project name="platform/packages/providers/BookmarkProvider" />
+  <remove-project name="platform/packages/providers/CalendarProvider" />
+  <remove-project name="platform/packages/providers/CallLogProvider" />
+  <remove-project name="platform/packages/providers/ContactsProvider" />
+  <remove-project name="platform/packages/providers/DownloadProvider" />
+  <remove-project name="platform/packages/providers/MediaProvider" />
+  <remove-project name="platform/packages/services/Mms" />
+  <remove-project name="platform/packages/services/Telecomm" />
+  <remove-project name="platform/packages/services/Telephony" />
+  <remove-project name="platform/prebuilts/build-tools" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" />
+  <remove-project name="platform/system/bt" />
+  <remove-project name="platform/system/core" />
+  <remove-project name="platform/system/update_engine" />
+  <remove-project name="platform/system/vold" />
+
+  <!-- LemonPie repos -->
+  <project name="android" path="android" remote="pie" />
+  <project name="bionic" path="bionic" remote="pie" />
+  <project name="bootable_recovery" path="bootable/recovery" remote="pie" />
+  <project name="build_make" path="build/make" remote="pie" revision="pie" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project name="build_soong" path="build/soong" remote="pie" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  <project name="external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" remote="pie" />
+  <project name="external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" remote="pie" />
+  <project name="frameworks_av" path="frameworks/av" remote="pie" />
+  <project name="frameworks_base" path="frameworks/base" remote="pie" />
+  <project name="frameworks_native" path="frameworks/native" remote="pie" />
+  <project name="hardware_libhardware" path="hardware/libhardware" remote="pie" />
+  <project name="hardware_libhardware_legacy" path="hardware/libhardware_legacy" remote="pie" />
+  <project name="hardware_qcom_bt" path="hardware/qcom/bt" remote="pie" revision="pie-caf" />
+  <project name="hardware_qcom_fm" path="hardware/qcom/fm" remote="pie" />
+  <project name="hardware_qcom_keymaster" path="hardware/qcom/keymaster" remote="pie" />
+  <project name="hardware_qcom_wlan" path="hardware/qcom/wlan" remote="pie" revision="pie-caf" />
+  <project name="hardware_ril" path="hardware/ril" remote="pie" revision="pie-caf" />
+  <project name="packages_apps_Dialer" path="packages/apps/Dialer" remote="pie" />
+  <project name="packages_apps_DocumentsUI" path="packages/apps/DocumentsUI" remote="pie" />
+  <project name="packages_apps_Gallery2" path="packages/apps/Gallery2" remote="pie" />
+  <project name="packages_apps_Launcher3" path="packages/apps/Launcher3" remote="pie" />
+  <project name="packages_apps_OmniGears" path="packages/apps/OmniGears" remote="pie" />
+  <project name="packages_apps_OmniStyle" path="packages/apps/OmniStyle" remote="pie" />
+  <project name="packages_apps_Settings" path="packages/apps/Settings" remote="pie" revision="pie" />
+  <project name="packages_apps_Updater" path="packages/apps/Updater" remote="pie" revision="pie" />
+  <project name="packages_services_Telecomm" path="packages/services/Telecomm" remote="pie" />
+  <project name="packages_services_Telephony" path="packages/services/Telephony" remote="pie" />
+  <project name="system_bt" path="system/bt" remote="pie" />
+  <project name="system_core" path="system/core" remote="pie" />
+  <project name="system_vold" path="system/vold" remote="pie" />
+  <project name="vendor_lemon" path="vendor/lemon" remote="pie" />
+  <project name="vendor_qcom_opensource_audio" path="vendor/qcom/opensource/audio" remote="pie" />
+  <project name="vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" remote="pie" />
+
+  <!-- AOSP repos -->
+  <project name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" remote="aosp" revision="master" depth="1" />
+
+  <!-- HALs -->
+  <project name="hardware_qcom_audio" path="hardware/qcom/audio" remote="pie" revision="pie-caf-8974" />
+  <project name="hardware_qcom_display" path="hardware/qcom/display" remote="pie" revision="pie-caf-8974" />
+  <project name="hardware_qcom_media" path="hardware/qcom/media" remote="pie" revision="pie-caf-8974" />
+
+  <!-- Device specific repos -->
+  <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" remote="github" revision="pie" />
+  <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" remote="github" revision="lineage-16.0" depth="1" />
+  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" remote="github" revision="lineage-16.0" depth="1" />
+
+  <!-- OmniROM repos -->
+  <project name="android_packages_apps_OmniChromium" path="packages/apps/OmniChromium" remote="gitlab" depth="1" />
+  <project name="android_packages_apps_OmniClock" path="packages/apps/OmniClock" remote="omnirom" />
+  <project name="android_packages_apps_OmniLib" path="packages/apps/OmniLib" remote="omnirom" />
+  <project name="android_packages_apps_OmniRecord" path="packages/apps/OmniRecord" remote="omnirom" />
+  <project name="android_packages_apps_OmniSwitch" path="packages/apps/OmniSwitch" remote="omnirom" />
+  <project name="android_packages_apps_SettingsIntelligence" path="packages/apps/SettingsIntelligence" remote="omnirom" />
+  <project name="android_packages_services_OmniJaws" path="packages/services/OmniJaws" remote="omnirom" />
+
+  <!-- LineageOS repos -->
+  <project name="android_external_perfetto" path="external/perfetto" remote="lineage" revision="refs/changes/13/223413/1" />
+
+  <project name="android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" remote="lineage" />
+  <project name="android_external_bash" path="external/bash" remote="lineage" />
+  <project name="android_external_exfat" path="external/exfat" remote="lineage" />
+  <project name="android_external_htop" path="external/htop" remote="lineage" />
+  <project name="android_external_libncurses" path="external/libncurses" remote="lineage" />
+  <project name="android_external_libtextclassifier" path="external/libtextclassifier" remote="lineage" />
+  <project name="android_external_nano" path="external/nano" remote="lineage" />
+  <project name="android_external_ntfs-3g" path="external/ntfs-3g" remote="lineage" />
+  <project name="android_external_openssh" path="external/openssh" remote="lineage" />
+  <project name="android_external_p7zip" path="external/p7zip" remote="lineage" />
+  <project name="android_external_rsync" path="external/rsync" remote="lineage" />
+  <project name="android_external_selinux" path="external/selinux" remote="lineage" />
+  <project name="android_external_tinycompress" path="external/tinycompress" remote="lineage" />
+  <project name="android_external_unrar" path="external/unrar" remote="lineage" />
+  <project name="android_external_vim" path="external/vim" remote="lineage" />
+  <project name="android_external_zip" path="external/zip" remote="lineage" />
+  <project name="android_packages_apps_Calendar" path="packages/apps/Calendar" remote="lineage" />
+  <project name="android_packages_apps_Contacts" path="packages/apps/Contacts" remote="lineage" />
+  <project name="android_packages_apps_Eleven" path="packages/apps/Eleven" remote="lineage" />
+  <project name="android_packages_apps_Email" path="packages/apps/Email" remote="lineage" />
+  <project name="android_packages_apps_ExactCalculator" path="packages/apps/ExactCalculator" remote="lineage" />
+  <!-- <project name="android_packages_apps_Gallery2" path="packages/apps/Gallery2" remote="lineage" /> -->
+  <project name="android_packages_apps_Messaging" path="packages/apps/Messaging" remote="lineage" />
+  <project name="android_packages_apps_Terminal" path="packages/apps/Terminal" remote="lineage" />
+  <project name="android_packages_apps_UnifiedEmail" path="packages/apps/UnifiedEmail" remote="lineage" />
+  <project name="android_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" remote="lineage" />
+  <project name="android_packages_providers_BlockedNumberProvider" path="packages/providers/BlockedNumberProvider" remote="lineage" />
+  <project name="android_packages_providers_BookmarkProvider" path="packages/providers/BookmarkProvider" remote="lineage" />
+  <project name="android_packages_providers_CalendarProvider" path="packages/providers/CalendarProvider" remote="lineage" />
+  <project name="android_packages_providers_CallLogProvider" path="packages/providers/CallLogProvider" remote="lineage" />
+  <project name="android_packages_providers_ContactsProvider" path="packages/providers/ContactsProvider" remote="lineage" />
+  <project name="android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" remote="lineage" />
+  <project name="android_packages_providers_MediaProvider" path="packages/providers/MediaProvider" remote="lineage" />
+  <project name="android_packages_services_Mms" path="packages/services/Mms" remote="lineage" />
+  <project name="android_prebuilts_build-tools" path="prebuilts/build-tools" remote="lineage" depth="1" />
+  <project name="android_system_update_engine" path="system/update_engine" remote="lineage" />
+
+  <!-- SDClang -->
+  <!-- <project name="syberia-project/platform_vendor_qcom_sdclang-6.0" path="vendor/qcom/sdclang-6.0/linux-x86" remote="github" revision="6.0"/> -->
+
+  <!-- Repos to remove -->
+  <remove-project name="device/generic/arm64" />
+  <remove-project name="device/generic/armv7-a-neon" />
+  <remove-project name="device/generic/common" />
+  <remove-project name="device/generic/goldfish" />
+  <remove-project name="device/generic/goldfish-opengl" />
+  <remove-project name="device/generic/mini-emulator-arm64" />
+  <remove-project name="device/generic/mini-emulator-armv7-a-neon" />
+  <remove-project name="device/generic/mini-emulator-x86" />
+  <remove-project name="device/generic/mini-emulator-x86_64" />
+  <remove-project name="device/generic/qemu" />
+  <remove-project name="device/generic/x86" />
+  <remove-project name="device/generic/x86_64" />
+  <remove-project name="device/google/accessory/arduino" />
+  <remove-project name="device/google/accessory/demokit" />
+  <remove-project name="device/google/atv" />
+  <remove-project name="device/google/crosshatch" />
+  <remove-project name="device/google/crosshatch-kernel" />
+  <remove-project name="device/google/crosshatch-sepolicy" />
+  <remove-project name="device/google/cuttlefish" />
+  <remove-project name="device/google/cuttlefish_common" />
+  <remove-project name="device/google/cuttlefish_kernel" />
+  <remove-project name="device/google/marlin" />
+  <remove-project name="device/google/marlin-kernel" />
+  <remove-project name="device/google/muskie" />
+  <remove-project name="device/google/taimen" />
+  <remove-project name="device/google/wahoo" />
+  <remove-project name="device/google/wahoo-kernel" />
+  <remove-project name="device/linaro/bootloader/OpenPlatformPkg" />
+  <remove-project name="device/linaro/bootloader/arm-trusted-firmware" />
+  <remove-project name="device/linaro/bootloader/edk2" />
+  <remove-project name="device/linaro/hikey" />
+  <remove-project name="device/linaro/hikey-kernel" />
+  <remove-project name="platform/external/autotest" />
+  <remove-project name="platform/external/linux-kselftest" />
+  <remove-project name="platform/hardware/intel/audio_media" />
+  <remove-project name="platform/hardware/intel/bootstub" />
+  <remove-project name="platform/hardware/intel/common/bd_prov" />
+  <remove-project name="platform/hardware/intel/common/libmix" />
+  <remove-project name="platform/hardware/intel/common/libstagefrighthw" />
+  <remove-project name="platform/hardware/intel/common/libva" />
+  <remove-project name="platform/hardware/intel/common/libwsbm" />
+  <remove-project name="platform/hardware/intel/common/omx-components" />
+  <remove-project name="platform/hardware/intel/common/utils" />
+  <remove-project name="platform/hardware/intel/common/wrs_omxil_core" />
+  <remove-project name="platform/hardware/intel/img/hwcomposer" />
+  <remove-project name="platform/hardware/intel/img/psb_headers" />
+  <remove-project name="platform/hardware/intel/img/psb_video" />
+  <remove-project name="platform/hardware/intel/sensors" />
+  <remove-project name="platform/hardware/marvell/bt" />
+  <remove-project name="platform/hardware/qcom/msm8960" />
+  <remove-project name="platform/hardware/qcom/msm8994" />
+  <remove-project name="platform/hardware/qcom/msm8996" />
+  <remove-project name="platform/hardware/qcom/msm8998" />
+  <remove-project name="platform/hardware/qcom/msm8x09" />
+  <remove-project name="platform/hardware/qcom/msm8x26" />
+  <remove-project name="platform/hardware/qcom/msm8x27" />
+  <remove-project name="platform/hardware/qcom/msm8x84" />
+  <remove-project name="platform/hardware/qcom/sdm845/bt" />
+  <remove-project name="platform/hardware/qcom/sdm845/data/ipacfg-mgr" />
+  <remove-project name="platform/hardware/qcom/sdm845/display" />
+  <remove-project name="platform/hardware/qcom/sdm845/gps" />
+  <remove-project name="platform/hardware/qcom/sdm845/media" />
+  <remove-project name="platform/hardware/qcom/sdm845/thermal" />
+  <remove-project name="platform/hardware/qcom/sdm845/vr" />
+  <remove-project name="platform/prebuilts/android-emulator" />
+  <remove-project name="platform/prebuilts/clang/host/darwin-x86" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/mips/mips64el-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" />
+  <remove-project name="platform/prebuilts/gdb/darwin-x86" />
+  <remove-project name="platform/prebuilts/go/darwin-x86" />
+  <remove-project name="platform/prebuilts/qemu-kernel" />
+
+</manifest>
