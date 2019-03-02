@@ -6,5 +6,5 @@
     <project name="YumeMichi/bootable_recovery" path="bootable/recovery" remote="github" revision="twrp-9.0" />
 
     <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" remote="github" revision="twrp-9.0" />
-    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" remote="github" revision="lineage-16.0-sultan" depth="1" />
+    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" remote="github" revision="pie" depth="1" />
 </manifest>
