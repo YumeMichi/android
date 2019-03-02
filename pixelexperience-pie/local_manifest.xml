@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" remote="github" revision="pie" />
+  <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" remote="github" revision="pie" />
+  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" remote="github" revision="pie" />
+</manifest>
