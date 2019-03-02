@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remove-project name="frameworks_av" />
+  <remove-project name="frameworks_base" />
+  <remove-project name="platform/hardware/qcom/wlan" />
+
+  <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" remote="github" revision="pie-caf" />
+  <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" remote="github" revision="pie" />
+  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" remote="github" revision="pie" />
+
+  <project name="android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8974" remote="lineage" revision="lineage-16.0-caf-8974" />
+  <project name="android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8974" remote="lineage" revision="lineage-16.0-caf-8974" />
+
+  <project name="Pie-onyx/frameworks_av" path="frameworks/av" remote="github" revision="pie-caf" />
+  <project name="Pie-onyx/frameworks_base" path="frameworks/base" remote="github" revision="pie-caf" />
+  <project name="Pie-onyx/hardware_qcom_display" path="hardware/qcom/display-caf/msm8974" remote="github" revision="pie-caf-8974" />
+  <project name="Pie-onyx/hardware_qcom_wlan" path="hardware/qcom/wlan" remote="github" revision="pie-caf" />
+</manifest>
