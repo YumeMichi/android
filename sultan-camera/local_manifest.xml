@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remove-project name="LineageOS/android_frameworks_base" />
+
+    <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" />
+    <project name="LineageOS/android_device_oppo_common" path="device/oppo/common" />
+    <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" />
+
+    <project name="YumeMichi/frameworks_base" path="frameworks/base" />
+    <project name="YumeMichi/patcher" path="patcher" />
+
+    <!-- onyx -->
+    <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" revision="sultan-camera" />
+    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" revision="pie" />
+    <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" revision="sultan-camera" />
+</manifest>
