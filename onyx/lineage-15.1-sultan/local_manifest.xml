@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="YumeMichi/patcher" path="patcher" />
-  <remove-project name="LineageOS/android_external_exfat" />
-  <remove-project name="LineageOS/android_frameworks_av" />
-  <remove-project name="LineageOS/android_frameworks_base" />
   <remove-project name="LineageOS/android_packages_apps_Snap" />
-  <remove-project name="LineageOS/android_vendor_lineage" />
+
+  <project name="YumeMichi/patcher" path="patcher" />
   <project name="LineageOS/android_device_oppo_common" path="device/oppo/common" />
   <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" />
   <project name="LineageOS/android_packages_resources_devicesettings" path="packages/resources/devicesettings" />
+
   <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" revision="lineage-15.1-sultan" />
-  <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" revision="lineage-16.0" />
-  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" revision="lineage-15.1-sultan" />
-  <project name="Oreo-onyx/packages_apps_Snap" path="packages/apps/Snap" />
-  <project name="Oreo-onyx/external_exfat" path="external/exfat" />
-  <project name="Oreo-onyx/frameworks_av" path="frameworks/av" />
-  <project name="Oreo-onyx/frameworks_base" path="frameworks/base" />
-  <project name="Oreo-onyx/vendor_lineage" path="vendor/lineage" />
-  <project name="LineageOS/android_external_stlport" path="external/stlport" remote="github" />
+  <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" revision="pie" />
+  <project name="YumeMichi/vendor_oneplus_onyx" path="vendor/oneplus/onyx" revision="lineage-15.1-sultan" depth="1" />
+
+  <project name="Team-RefRain/packages_apps_Snap" path="packages/apps/Snap" revision="lineage-15.1-sultan" />
 </manifest>
