@@ -4,33 +4,52 @@
     <remove-project name="LineageOS/android_art" />
     <remove-project name="LineageOS/android_bionic" />
     <remove-project name="platform/external/arm-optimized-routines" />
+    <remove-project name="platform/external/f2fs-tools" />
     <remove-project name="platform/external/jemalloc_new" />
     <remove-project name="platform/external/libjpeg-turbo" />
-    <remove-project name="platform/external/skia" />
+    <remove-project name="platform/external/libpng" />
+    <remove-project name="platform/external/libvpx" />
+    <remove-project name="platform/external/libxml2" />
+    <remove-project name="platform/external/libyuv" />
+    <remove-project name="LineageOS/android_external_skia" />
     <remove-project name="platform/external/sqlite" />
+    <remove-project name="platform/external/zlib" />
     <remove-project name="platform/libcore" />
+    <remove-project name="platform/prebuilts/abi-dumps/ndk" />
+    <remove-project name="platform/prebuilts/abi-dumps/vndk" />
+    <remove-project name="platform/prebuilts/r8" />
     <project name="crdroidandroid/android_art" path="art" revision="10.0" />
     <project name="crdroidandroid/android_bionic" path="bionic" revision="10.0" />
     <project name="crdroidandroid/android_external_arm-optimized-routines" path="external/arm-optimized-routines" revision="10.0" />
+    <project name="crdroidandroid/android_external_f2fs-tools" path="external/f2fs-tools" revision="10.0" />
     <project name="crdroidandroid/android_external_jemalloc-new" path="external/jemalloc_new" revision="10.0" />
     <project name="crdroidandroid/android_external_libjpeg-turbo" path="external/libjpeg-turbo" revision="10.0" />
+    <project name="crdroidandroid/android_external_libpng" path="external/libpng" revision="10.0" />
+    <project name="crdroidandroid/android_external_libvpx" path="external/libvpx" revision="10.0" />
+    <project name="crdroidandroid/android_external_libxml2" path="external/libxml2" revision="10.0" />
+    <project name="crdroidandroid/android_external_libyuv" path="external/libyuv" revision="10.0" />
     <project name="crdroidandroid/android_external_skia" path="external/skia" revision="10.0" />
     <project name="crdroidandroid/android_external_sqlite" path="external/sqlite" revision="10.0" />
+    <project name="crdroidandroid/android_external_zlib" path="external/zlib" revision="10.0" />
     <project name="crdroidandroid/android_libcore" path="libcore" revision="10.0" />
+    <project name="crdroidandroid/android_prebuilts_abi-dumps_ndk" path="prebuilts/abi-dumps/ndk" revision="10.0" clone-depth="1" />
+    <project name="crdroidandroid/android_prebuilts_abi-dumps_vndk" path="prebuilts/abi-dumps/vndk" revision="10.0" clone-depth="1" />
+    <project name="crdroidandroid/android_prebuilts_r8" path="prebuilts/r8" revision="10.0" clone-depth="1" />
     <!-- Common END -->
 
     <!-- Onyx START -->
     <project name="LineageOS/android_device_oppo_common" path="device/oppo/common" />
     <project name="LineageOS/android_external_sony_boringssl-compat" path="external/sony/boringssl-compat" />
+    <project name="LineageOS/android_hardware_sony_timekeep" path="hardware/sony/timekeep" />
 
     <project name="YumeMichi/patcher" path="patcher" />
     <project name="YumeMichi/build_scripts" path="build/scripts" revision="master">
         <linkfile src="lineageos_onyx.sh" dest="lineageos_onyx.sh" />
     </project>
-    <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" />
-    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" />
-    <project name="YumeMichi/proprietary_vendor_oneplus" path="vendor/oneplus" />
-
     <project name="YumeMichi/linaro-arm-eabi-4.9" path="prebuilts/gcc/linux-x86/arm/linaro-arm-eabi-4.9" revision="master" />
+
+    <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" />
+    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" revision="dev2" />
+    <project name="YumeMichi/proprietary_vendor_oneplus" path="vendor/oneplus" />
     <!-- Onyx END -->
 </manifest>
