@@ -17,7 +17,6 @@
     <remove-project name="platform/libcore" />
     <remove-project name="platform/prebuilts/abi-dumps/ndk" />
     <remove-project name="platform/prebuilts/abi-dumps/vndk" />
-    <remove-project name="platform/prebuilts/r8" />
     <project name="crdroidandroid/android_art" path="art" revision="10.0" />
     <project name="crdroidandroid/android_bionic" path="bionic" revision="10.0" />
     <project name="crdroidandroid/android_external_arm-optimized-routines" path="external/arm-optimized-routines" revision="10.0" />
@@ -32,9 +31,8 @@
     <project name="crdroidandroid/android_external_sqlite" path="external/sqlite" revision="10.0" />
     <project name="crdroidandroid/android_external_zlib" path="external/zlib" revision="10.0" />
     <project name="crdroidandroid/android_libcore" path="libcore" revision="10.0" />
-    <project name="crdroidandroid/android_prebuilts_abi-dumps_ndk" path="prebuilts/abi-dumps/ndk" revision="10.0" clone-depth="1" />
-    <project name="crdroidandroid/android_prebuilts_abi-dumps_vndk" path="prebuilts/abi-dumps/vndk" revision="10.0" clone-depth="1" />
-    <project name="crdroidandroid/android_prebuilts_r8" path="prebuilts/r8" revision="10.0" clone-depth="1" />
+    <project name="crdroidandroid/android_prebuilts_abi-dumps_ndk" path="prebuilts/abi-dumps/ndk" revision="10.0" />
+    <project name="crdroidandroid/android_prebuilts_abi-dumps_vndk" path="prebuilts/abi-dumps/vndk" revision="10.0" />
     <!-- Common END -->
 
     <!-- Onyx START -->
@@ -49,7 +47,7 @@
     <project name="YumeMichi/linaro-arm-eabi-4.9" path="prebuilts/gcc/linux-x86/arm/linaro-arm-eabi-4.9" revision="master" />
 
     <project name="YumeMichi/device_oneplus_onyx" path="device/oneplus/onyx" />
-    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" revision="dev2" />
+    <project name="YumeMichi/kernel_oneplus_onyx" path="kernel/oneplus/onyx" />
     <project name="YumeMichi/proprietary_vendor_oneplus" path="vendor/oneplus" />
     <!-- Onyx END -->
 </manifest>
