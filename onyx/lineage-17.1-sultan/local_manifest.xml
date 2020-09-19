@@ -12,6 +12,7 @@
     <remove-project name="platform/external/libxml2" />
     <remove-project name="platform/external/libyuv" />
     <remove-project name="LineageOS/android_external_skia" />
+    <remove-project name="LineageOS/android_prebuilts_r8" />
     <remove-project name="platform/external/sqlite" />
     <remove-project name="platform/external/zlib" />
     <remove-project name="platform/libcore" />
@@ -31,8 +32,9 @@
     <project name="crdroidandroid/android_external_sqlite" path="external/sqlite" revision="10.0" />
     <project name="crdroidandroid/android_external_zlib" path="external/zlib" revision="10.0" />
     <project name="crdroidandroid/android_libcore" path="libcore" revision="10.0" />
-    <project name="crdroidandroid/android_prebuilts_abi-dumps_ndk" path="prebuilts/abi-dumps/ndk" revision="10.0" />
-    <project name="crdroidandroid/android_prebuilts_abi-dumps_vndk" path="prebuilts/abi-dumps/vndk" revision="10.0" />
+    <project name="crdroidandroid/android_prebuilts_abi-dumps_ndk" path="prebuilts/abi-dumps/ndk" revision="10.0" clone-depth="1" />
+    <project name="crdroidandroid/android_prebuilts_abi-dumps_vndk" path="prebuilts/abi-dumps/vndk" revision="10.0" clone-depth="1" />
+    <project name="crdroidandroid/android_prebuilts_r8" path="prebuilts/r8" revision="10.0" clone-depth="1" />
     <!-- Common END -->
 
     <!-- Onyx START -->
